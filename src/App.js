@@ -4,6 +4,7 @@ import TodoList from "./components/TodoList";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./store/todoSlice";
 import TodoTitle from "./components/TodoTitle";
+// import Counter from "./components/Counter";
 // import TraficLight from "./components/TraficLight";
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
   const dispatch = useDispatch()
 
   const addTask = () => {
-    dispatch(addTodo({ text }))
-    setText('')
+    if (text.length !== 0) {
+      dispatch(addTodo({ text }))
+      setText('')
+    }
   }
 
 
@@ -24,6 +27,8 @@ function App() {
         <InputField text={text} addTask={addTask} setText={setText} />
       </div>
       <TodoList />
+      {/* <TraficLight /> */}
+      {/* <Counter /> */}
     </div>
   );
 }
