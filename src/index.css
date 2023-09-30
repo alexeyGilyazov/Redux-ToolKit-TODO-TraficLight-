@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 5px solid #f3f3f3;
+    border-radius: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+    display: flex;
+    padding: 20px;
+    /* border: 5px solid #d8d8d840; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.App {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+.traficLight {
+    width: 300px;
+    height: 800px;
+    background-color: black;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.color {
+    border-radius: 50%;
+    border: 10px solid gray;
+    width: 200px;
+    height: 200px;
+    opacity: .5;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: rgb(7, 214, 7);
+}
+
+.actual {
+    opacity: 1;
+}
+
+.delete {
+    color: red;
+    font-size: 25px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.complited {
+    text-decoration: line-through;
+    color: #1976d2 !important;
+}
+
+.textfield {
+    border: none;
+    border-radius: 10px;
+}
+
+.input-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.todoItem {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    justify-content: space-between;
+    border-bottom: 1px solid #6c6c6c;
+    margin-bottom: 10px;
+}
+
+ul {
+    width: 80%;
+    margin: 0;
+    padding: 0;
 }
